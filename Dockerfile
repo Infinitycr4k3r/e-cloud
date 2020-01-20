@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y git && apt-get install -y wget && apt-g
 RUN apt-get install -y nodejs && apt-get install -y npm
 RUN wget https://raw.githubusercontent.com/Infinitycr4k3r/e-cloud/master/embetacloud.zip
 RUN unzip embetacloud.zip
-RUN rm master.zip
-RUN npm install
+RUN rm embetacloud.zip
+RUN cd embetacloud && npm install
 CMD node server/server.js
 EXPOSE 80
 EXPOSE 8080
